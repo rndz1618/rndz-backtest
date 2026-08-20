@@ -1,0 +1,145 @@
+{
+  "harness_version": "0.1.0",
+  "generated_at": "2026-08-20T15:50:23.582172+00:00",
+  "reproducibility": {
+    "seed": 42,
+    "git_revision": "HEAD",
+    "git_dirty": true,
+    "strategy_code_hash": "7eb0c841bbda6f62",
+    "python": "3.12.3",
+    "platform": "aarch64"
+  },
+  "data": {
+    "db_path": "/root/rndz-market-data/data/market.db",
+    "source": "binance",
+    "symbol": "ETHUSDT",
+    "interval": "1d",
+    "n_rows": 90,
+    "start": 1779494400,
+    "end": 1787184000,
+    "start_iso": "2026-05-23T00:00:00+00:00",
+    "end_iso": "2026-08-20T00:00:00+00:00",
+    "contract": "candles(source,symbol,interval,open_time,open,high,low,close,volume) from rndz-market-data SQLite"
+  },
+  "split": {
+    "method": "timewise",
+    "train_frac": 0.7,
+    "n_train": 62,
+    "n_test": 28,
+    "train_start_iso": "2026-05-23T00:00:00+00:00",
+    "train_end_iso": "2026-07-23T00:00:00+00:00",
+    "test_start_iso": "2026-07-24T00:00:00+00:00",
+    "test_end_iso": "2026-08-20T00:00:00+00:00"
+  },
+  "strategy": {
+    "name": "sma_crossover",
+    "params_grid_searched": [
+      {
+        "fast": 3,
+        "slow": 10,
+        "short_on_down": false
+      },
+      {
+        "fast": 3,
+        "slow": 10,
+        "short_on_down": true
+      },
+      {
+        "fast": 5,
+        "slow": 20,
+        "short_on_down": false
+      },
+      {
+        "fast": 5,
+        "slow": 20,
+        "short_on_down": true
+      },
+      {
+        "fast": 10,
+        "slow": 30,
+        "short_on_down": false
+      },
+      {
+        "fast": 10,
+        "slow": 30,
+        "short_on_down": true
+      },
+      {
+        "fast": 5,
+        "slow": 15,
+        "short_on_down": false
+      },
+      {
+        "fast": 5,
+        "slow": 15,
+        "short_on_down": true
+      }
+    ],
+    "params_chosen_on_train": {
+      "fast": 3,
+      "slow": 10,
+      "short_on_down": true
+    },
+    "train_sharpe_of_chosen": 3.552001
+  },
+  "engine": {
+    "initial_capital": 10000.0,
+    "cost_per_trade": 0.001
+  },
+  "results": {
+    "train": {
+      "n_periods": 61,
+      "total_return": 0.340737,
+      "cagr": 4.78062,
+      "annualized_vol": 0.534154,
+      "sharpe": 3.552001,
+      "sortino": 6.219197,
+      "calmar": 56.486993,
+      "max_drawdown": 0.084632,
+      "win_rate": 0.641509,
+      "profit_factor": 1.757707,
+      "end_equity": 13407.372185
+    },
+    "test": {
+      "n_periods": 27,
+      "total_return": 0.157455,
+      "cagr": 6.219076,
+      "annualized_vol": 0.670044,
+      "sharpe": 3.25076,
+      "sortino": 16.094891,
+      "calmar": 110.780562,
+      "max_drawdown": 0.056139,
+      "win_rate": 0.578947,
+      "profit_factor": 3.139237,
+      "end_equity": 11574.550095
+    },
+    "test_n_trades": 4,
+    "test_trades_per_year": 54.07,
+    "benchmark_buy_and_hold_test": {
+      "n_periods": 27,
+      "total_return": 0.245493,
+      "cagr": 18.447858,
+      "annualized_vol": 0.704905,
+      "sharpe": 4.538884,
+      "sortino": 17.14634,
+      "calmar": 328.478743,
+      "max_drawdown": 0.056161,
+      "win_rate": 0.592593,
+      "profit_factor": 2.941179,
+      "end_equity": 12442.472441
+    },
+    "benchmark_buy_and_hold_full": {
+      "n_periods": 89,
+      "total_return": 0.094783,
+      "cagr": 0.449734,
+      "annualized_vol": 0.600221,
+      "sharpe": 0.907325,
+      "sortino": 1.543568,
+      "calmar": 1.732105,
+      "max_drawdown": 0.259646,
+      "win_rate": 0.505618,
+      "profit_factor": 1.167434,
+      "end_equity": 10936.877399
+    }
+  }
+}
