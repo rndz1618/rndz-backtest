@@ -2,7 +2,7 @@
 
 - Source data: binance/ETHUSDT 1d (90 bars, 2026-05-23 → 2026-08-20)
 - Contract: `candles(source,symbol,interval,open_time,open,high,low,close,volume) from rndz-market-data SQLite`
-- Harness: v0.1.0 · git `711cba337167c02eefbe7dd9cef104e263536e2d` (dirty) · seed 42
+- Harness: v0.1.0 · git `512613f74eed824789cc75bd6953f30410f38d32` (dirty) · seed 42
 - Strategy code hash: `7eb0c841bbda6f62`
 
 ## Train/test discipline
@@ -16,15 +16,15 @@
 
 | Metric | Strategy | Buy & hold |
 |---|---|---|
-| Total return | 16.24% | 25.09% |
-| CAGR | 665.11% | 1961.18% |
-| Ann. volatility | 67.24% | 70.69% |
-| Sharpe | 3.33 | 4.61 |
-| Sortino | 16.54 | 17.47 |
-| Calmar | 118.48 | 349.20 |
+| Total return | 15.89% | 24.71% |
+| CAGR | 634.42% | 1878.51% |
+| Ann. volatility | 67.07% | 70.55% |
+| Sharpe | 3.27 | 4.56 |
+| Sortino | 16.23 | 17.24 |
+| Calmar | 113.01 | 334.48 |
 | Max drawdown | 5.61% | 5.62% |
 | Win rate | 57.89% | 59.26% |
-| End equity (10k start) | 11,624.42 | 12,496.09 |
+| End equity (10k start) | 11,589.28 | 12,458.30 |
 
 - Trades on test: 4 (54.07 / year) · cost 0.1% per change
 - Train (same params, diagnostic): Sharpe 3.55, max DD 8.46%, total return 34.07%

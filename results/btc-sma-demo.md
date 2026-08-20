@@ -2,7 +2,7 @@
 
 - Source data: binance/BTCUSDT 1d (90 bars, 2026-05-23 → 2026-08-20)
 - Contract: `candles(source,symbol,interval,open_time,open,high,low,close,volume) from rndz-market-data SQLite`
-- Harness: v0.1.0 · git `711cba337167c02eefbe7dd9cef104e263536e2d` · seed 42
+- Harness: v0.1.0 · git `512613f74eed824789cc75bd6953f30410f38d32` · seed 42
 - Strategy code hash: `7eb0c841bbda6f62`
 
 ## Train/test discipline
@@ -16,15 +16,15 @@
 
 | Metric | Strategy | Buy & hold |
 |---|---|---|
-| Total return | 5.56% | 13.01% |
-| CAGR | 107.79% | 422.66% |
-| Ann. volatility | 34.25% | 37.20% |
-| Sharpe | 2.30 | 4.63 |
-| Sortino | 6.19 | 10.99 |
-| Calmar | 18.77 | 107.29 |
+| Total return | 5.41% | 12.85% |
+| CAGR | 103.73% | 412.44% |
+| Ann. volatility | 33.98% | 36.96% |
+| Sharpe | 2.25 | 4.60 |
+| Sortino | 6.03 | 10.86 |
+| Calmar | 18.06 | 104.70 |
 | Max drawdown | 5.74% | 3.94% |
 | Win rate | 42.11% | 59.26% |
-| End equity (10k start) | 10,555.92 | 11,290.01 |
+| End equity (10k start) | 10,540.51 | 11,273.52 |
 
 - Trades on test: 4 (54.07 / year) · cost 0.1% per change
 - Train (same params, diagnostic): Sharpe 1.10, max DD 13.07%, total return 5.83%
