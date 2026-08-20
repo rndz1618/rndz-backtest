@@ -43,6 +43,13 @@ from backtest.metrics import summarize_equity  # noqa: E402
 from backtest.splits import split_timewise  # noqa: E402
 from strategies import STRATEGIES, get_strategy  # noqa: E402
 
+# Byte-stable timestamps: the report must reproduce EXACTLY on reruns,
+# so we embed the data's own last bar time instead of wall-clock now().
+def report_timestamp(rows: list[dict]) -> str:
+    return datetime.datetime.fromtimestamp(
+        rows[-1]["open_time"], datetime.timezone.utc
+    ).isoformat()
+
 
 def git_revision() -> str:
     try:
@@ -164,7 +171,7 @@ def main() -> int:
 
     report = {
         "harness_version": "0.1.0",
-        "generated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "generated_at": report_timestamp(rows),
         "reproducibility": {
             "seed": args.seed,
             "git_revision": git_revision(),
