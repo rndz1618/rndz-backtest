@@ -1,9 +1,9 @@
 {
   "harness_version": "0.1.0",
-  "generated_at": "2026-08-20T15:50:23.582172+00:00",
+  "generated_at": "2026-08-20T16:00:14.815306+00:00",
   "reproducibility": {
     "seed": 42,
-    "git_revision": "HEAD",
+    "git_revision": "5837d0360c3938ce8e88966f470dacb67ccc9f8d",
     "git_dirty": true,
     "strategy_code_hash": "7eb0c841bbda6f62",
     "python": "3.12.3",
@@ -102,44 +102,44 @@
     },
     "test": {
       "n_periods": 27,
-      "total_return": 0.157455,
-      "cagr": 6.219076,
-      "annualized_vol": 0.670044,
-      "sharpe": 3.25076,
-      "sortino": 16.094891,
-      "calmar": 110.780562,
+      "total_return": 0.162442,
+      "cagr": 6.651127,
+      "annualized_vol": 0.67239,
+      "sharpe": 3.328575,
+      "sortino": 16.537858,
+      "calmar": 118.476697,
       "max_drawdown": 0.056139,
       "win_rate": 0.578947,
-      "profit_factor": 3.139237,
-      "end_equity": 11574.550095
+      "profit_factor": 3.198114,
+      "end_equity": 11624.424689
     },
     "test_n_trades": 4,
     "test_trades_per_year": 54.07,
     "benchmark_buy_and_hold_test": {
       "n_periods": 27,
-      "total_return": 0.245493,
-      "cagr": 18.447858,
-      "annualized_vol": 0.704905,
-      "sharpe": 4.538884,
-      "sortino": 17.14634,
-      "calmar": 328.478743,
+      "total_return": 0.25086,
+      "cagr": 19.611783,
+      "annualized_vol": 0.706888,
+      "sharpe": 4.610951,
+      "sortino": 17.467605,
+      "calmar": 349.203358,
       "max_drawdown": 0.056161,
       "win_rate": 0.592593,
-      "profit_factor": 2.941179,
-      "end_equity": 12442.472441
+      "profit_factor": 2.97755,
+      "end_equity": 12496.0869
     },
     "benchmark_buy_and_hold_full": {
       "n_periods": 89,
-      "total_return": 0.094783,
-      "cagr": 0.449734,
-      "annualized_vol": 0.600221,
-      "sharpe": 0.907325,
-      "sortino": 1.543568,
-      "calmar": 1.732105,
+      "total_return": 0.0995,
+      "cagr": 0.475525,
+      "annualized_vol": 0.601134,
+      "sharpe": 0.9362,
+      "sortino": 1.595114,
+      "calmar": 1.831436,
       "max_drawdown": 0.259646,
       "win_rate": 0.505618,
-      "profit_factor": 1.167434,
-      "end_equity": 10936.877399
+      "profit_factor": 1.173025,
+      "end_equity": 10984.004269
     }
   }
 }
