@@ -3,8 +3,8 @@
   "generated_at": "2026-08-20T00:00:00+00:00",
   "reproducibility": {
     "seed": 42,
-    "git_revision": "e08f023ed0db50194fda25343cbf9b3549688cca",
-    "git_dirty": true,
+    "git_revision": "f469543053bb3d35eb90b00d8aa9f82f1cd630aa",
+    "git_dirty": false,
     "strategy_code_hash": "7eb0c841bbda6f62",
     "python": "3.12.3",
     "platform": "aarch64"

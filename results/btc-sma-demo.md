@@ -2,7 +2,7 @@
 
 - Source data: binance/BTCUSDT 1d (90 bars, 2026-05-23 → 2026-08-20)
 - Contract: `candles(source,symbol,interval,open_time,open,high,low,close,volume) from rndz-market-data SQLite`
-- Harness: v0.1.0 · git `e08f023ed0db50194fda25343cbf9b3549688cca` (dirty) · seed 42
+- Harness: v0.1.0 · git `f469543053bb3d35eb90b00d8aa9f82f1cd630aa` · seed 42
 - Strategy code hash: `7eb0c841bbda6f62`
 
 ## Train/test discipline
