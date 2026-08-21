@@ -146,6 +146,18 @@ def main() -> int:
         for fast, slow in ((3, 10), (5, 20), (10, 30), (5, 15)):
             for short_on_down in (False, True):
                 grid.append({"fast": fast, "slow": slow, "short_on_down": short_on_down})
+    elif args.strategy == "rsi_mean_reversion":
+        for window in (10, 14, 20):
+            for oversold in (25, 30, 35):
+                for overbought in (65, 70, 75):
+                    for short_overbought in (False, True):
+                        grid.append({"window": window, "oversold": oversold, "overbought": overbought, "short_overbought": short_overbought})
+    elif args.strategy == "ema_atr_trend":
+        for fast, slow in ((12, 26), (8, 21), (5, 13), (10, 20)):
+            for atr_w in (10, 14, 20):
+                for vol_thresh in (0.6, 0.7, 0.8):
+                    for vol_tgt in (0.25, 0.30, 0.40):
+                        grid.append({"fast_ema": fast, "slow_ema": slow, "atr_window": atr_w, "vol_threshold": vol_thresh, "vol_target": vol_tgt})
     else:
         grid = [{}]
     train_sel = grid_search_train(args.strategy, train_rows, grid, args.cost)

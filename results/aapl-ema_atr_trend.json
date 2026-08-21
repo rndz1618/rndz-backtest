@@ -1,0 +1,863 @@
+{
+  "harness_version": "0.1.0",
+  "generated_at": "2026-08-19T00:00:00+00:00",
+  "reproducibility": {
+    "seed": 42,
+    "git_revision": "58366be2366bc9f569be3c7f4d54c40727167d50",
+    "git_dirty": true,
+    "strategy_code_hash": "2d2de74cd57caad2",
+    "python": "3.12.3",
+    "platform": "aarch64"
+  },
+  "data": {
+    "db_path": "/root/rndz-market-data/data/market.db",
+    "source": "nasdaq",
+    "symbol": "AAPL",
+    "interval": "1d",
+    "n_rows": 60,
+    "start": 1779753600,
+    "end": 1787097600,
+    "start_iso": "2026-05-26T00:00:00+00:00",
+    "end_iso": "2026-08-19T00:00:00+00:00",
+    "contract": "candles(source,symbol,interval,open_time,open,high,low,close,volume) from rndz-market-data SQLite"
+  },
+  "split": {
+    "method": "timewise",
+    "train_frac": 0.7,
+    "n_train": 42,
+    "n_test": 18,
+    "train_start_iso": "2026-05-26T00:00:00+00:00",
+    "train_end_iso": "2026-07-24T00:00:00+00:00",
+    "test_start_iso": "2026-07-27T00:00:00+00:00",
+    "test_end_iso": "2026-08-19T00:00:00+00:00"
+  },
+  "strategy": {
+    "name": "ema_atr_trend",
+    "params_grid_searched": [
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 10,
+        "vol_threshold": 0.6,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 10,
+        "vol_threshold": 0.6,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 10,
+        "vol_threshold": 0.6,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 10,
+        "vol_threshold": 0.7,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 10,
+        "vol_threshold": 0.7,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 10,
+        "vol_threshold": 0.7,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 10,
+        "vol_threshold": 0.8,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 10,
+        "vol_threshold": 0.8,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 10,
+        "vol_threshold": 0.8,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 14,
+        "vol_threshold": 0.6,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 14,
+        "vol_threshold": 0.6,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 14,
+        "vol_threshold": 0.6,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 14,
+        "vol_threshold": 0.7,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 14,
+        "vol_threshold": 0.7,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 14,
+        "vol_threshold": 0.7,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 14,
+        "vol_threshold": 0.8,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 14,
+        "vol_threshold": 0.8,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 14,
+        "vol_threshold": 0.8,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 20,
+        "vol_threshold": 0.6,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 20,
+        "vol_threshold": 0.6,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 20,
+        "vol_threshold": 0.6,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 20,
+        "vol_threshold": 0.7,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 20,
+        "vol_threshold": 0.7,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 20,
+        "vol_threshold": 0.7,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 20,
+        "vol_threshold": 0.8,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 20,
+        "vol_threshold": 0.8,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 12,
+        "slow_ema": 26,
+        "atr_window": 20,
+        "vol_threshold": 0.8,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 10,
+        "vol_threshold": 0.6,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 10,
+        "vol_threshold": 0.6,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 10,
+        "vol_threshold": 0.6,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 10,
+        "vol_threshold": 0.7,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 10,
+        "vol_threshold": 0.7,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 10,
+        "vol_threshold": 0.7,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 10,
+        "vol_threshold": 0.8,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 10,
+        "vol_threshold": 0.8,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 10,
+        "vol_threshold": 0.8,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 14,
+        "vol_threshold": 0.6,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 14,
+        "vol_threshold": 0.6,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 14,
+        "vol_threshold": 0.6,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 14,
+        "vol_threshold": 0.7,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 14,
+        "vol_threshold": 0.7,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 14,
+        "vol_threshold": 0.7,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 14,
+        "vol_threshold": 0.8,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 14,
+        "vol_threshold": 0.8,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 14,
+        "vol_threshold": 0.8,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 20,
+        "vol_threshold": 0.6,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 20,
+        "vol_threshold": 0.6,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 20,
+        "vol_threshold": 0.6,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 20,
+        "vol_threshold": 0.7,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 20,
+        "vol_threshold": 0.7,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 20,
+        "vol_threshold": 0.7,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 20,
+        "vol_threshold": 0.8,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 20,
+        "vol_threshold": 0.8,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 8,
+        "slow_ema": 21,
+        "atr_window": 20,
+        "vol_threshold": 0.8,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 10,
+        "vol_threshold": 0.6,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 10,
+        "vol_threshold": 0.6,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 10,
+        "vol_threshold": 0.6,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 10,
+        "vol_threshold": 0.7,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 10,
+        "vol_threshold": 0.7,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 10,
+        "vol_threshold": 0.7,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 10,
+        "vol_threshold": 0.8,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 10,
+        "vol_threshold": 0.8,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 10,
+        "vol_threshold": 0.8,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 14,
+        "vol_threshold": 0.6,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 14,
+        "vol_threshold": 0.6,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 14,
+        "vol_threshold": 0.6,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 14,
+        "vol_threshold": 0.7,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 14,
+        "vol_threshold": 0.7,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 14,
+        "vol_threshold": 0.7,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 14,
+        "vol_threshold": 0.8,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 14,
+        "vol_threshold": 0.8,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 14,
+        "vol_threshold": 0.8,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 20,
+        "vol_threshold": 0.6,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 20,
+        "vol_threshold": 0.6,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 20,
+        "vol_threshold": 0.6,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 20,
+        "vol_threshold": 0.7,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 20,
+        "vol_threshold": 0.7,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 20,
+        "vol_threshold": 0.7,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 20,
+        "vol_threshold": 0.8,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 20,
+        "vol_threshold": 0.8,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 5,
+        "slow_ema": 13,
+        "atr_window": 20,
+        "vol_threshold": 0.8,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 10,
+        "vol_threshold": 0.6,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 10,
+        "vol_threshold": 0.6,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 10,
+        "vol_threshold": 0.6,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 10,
+        "vol_threshold": 0.7,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 10,
+        "vol_threshold": 0.7,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 10,
+        "vol_threshold": 0.7,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 10,
+        "vol_threshold": 0.8,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 10,
+        "vol_threshold": 0.8,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 10,
+        "vol_threshold": 0.8,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 14,
+        "vol_threshold": 0.6,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 14,
+        "vol_threshold": 0.6,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 14,
+        "vol_threshold": 0.6,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 14,
+        "vol_threshold": 0.7,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 14,
+        "vol_threshold": 0.7,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 14,
+        "vol_threshold": 0.7,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 14,
+        "vol_threshold": 0.8,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 14,
+        "vol_threshold": 0.8,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 14,
+        "vol_threshold": 0.8,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 20,
+        "vol_threshold": 0.6,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 20,
+        "vol_threshold": 0.6,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 20,
+        "vol_threshold": 0.6,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 20,
+        "vol_threshold": 0.7,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 20,
+        "vol_threshold": 0.7,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 20,
+        "vol_threshold": 0.7,
+        "vol_target": 0.4
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 20,
+        "vol_threshold": 0.8,
+        "vol_target": 0.25
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 20,
+        "vol_threshold": 0.8,
+        "vol_target": 0.3
+      },
+      {
+        "fast_ema": 10,
+        "slow_ema": 20,
+        "atr_window": 20,
+        "vol_threshold": 0.8,
+        "vol_target": 0.4
+      }
+    ],
+    "params_chosen_on_train": {
+      "fast_ema": 12,
+      "slow_ema": 26,
+      "atr_window": 20,
+      "vol_threshold": 0.7,
+      "vol_target": 0.25
+    },
+    "train_sharpe_of_chosen": 4.105663
+  },
+  "engine": {
+    "initial_capital": 10000.0,
+    "cost_per_trade": 0.001
+  },
+  "results": {
+    "train": {
+      "n_periods": 41,
+      "total_return": 0.064108,
+      "cagr": 0.738749,
+      "annualized_vol": 0.137018,
+      "sharpe": 4.105663,
+      "sortino": 131.768847,
+      "calmar": 606.847279,
+      "max_drawdown": 0.001217,
+      "win_rate": 0.4,
+      "profit_factor": 29.495415,
+      "end_equity": 10641.075433
+    },
+    "test": {
+      "n_periods": 17,
+      "total_return": 0.0,
+      "cagr": 0.0,
+      "annualized_vol": 0.0,
+      "sharpe": 0.0,
+      "sortino": 0.0,
+      "calmar": 0.0,
+      "max_drawdown": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": 0.0,
+      "end_equity": 10000.0
+    },
+    "test_n_trades": 0,
+    "test_trades_per_year": 0.0,
+    "benchmark_buy_and_hold_test": {
+      "n_periods": 17,
+      "total_return": -0.068229,
+      "cagr": -0.780696,
+      "annualized_vol": 0.410506,
+      "sharpe": -3.488918,
+      "sortino": -3.860626,
+      "calmar": -7.018211,
+      "max_drawdown": 0.111239,
+      "win_rate": 0.529412,
+      "profit_factor": 0.548755,
+      "end_equity": 9308.389554
+    },
+    "benchmark_buy_and_hold_full": {
+      "n_periods": 59,
+      "total_return": 0.027568,
+      "cagr": 0.183219,
+      "annualized_vol": 0.395332,
+      "sharpe": 0.62231,
+      "sortino": 0.840029,
+      "calmar": 1.441961,
+      "max_drawdown": 0.127062,
+      "win_rate": 0.542373,
+      "profit_factor": 1.094819,
+      "end_equity": 10265.402977
+    }
+  }
+}

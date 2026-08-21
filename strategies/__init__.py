@@ -19,6 +19,9 @@ from __future__ import annotations
 import statistics
 from typing import Any
 
+# Import custom strategies
+from strategies.ema_atr_trend import ema_atr_trend
+
 # ---------------------------------------------------------------------------
 # Demo strategy: Bollinger mean reversion (trained on train partition only)
 # ---------------------------------------------------------------------------
@@ -106,10 +109,21 @@ def sma_crossover(rows: list[dict[str, Any]], params: dict[str, Any]) -> list[in
     return positions
 
 
+# ---------------------------------------------------------------------------
+# RSI Mean Reversion — new strategy for Phase 2
+# Hypothesis: in crypto markets, extreme RSI readings often revert short-term.
+# Long when RSI < oversold threshold; optional short when RSI > overbought.
+# ---------------------------------------------------------------------------
+
+from .rsi_mean_reversion import rsi_mean_reversion  # noqa: E402
+
+
 STRATEGIES: dict[str, Any] = {
     "bollinger_mean_reversion": bollinger_mean_reversion,
     "sma_crossover": sma_crossover,
     "buy_and_hold": buy_and_hold,
+    "rsi_mean_reversion": rsi_mean_reversion,
+    "ema_atr_trend": ema_atr_trend,
 }
 
 
