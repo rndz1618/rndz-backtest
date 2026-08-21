@@ -1,33 +1,33 @@
-# Backtest: sma_crossover on BTCUSDT
+# Backtest: rsi_mean_reversion on ETHUSDT
 
-- Source data: binance/BTCUSDT 1d (90 bars, 2026-05-23 → 2026-08-20)
+- Source data: binance/ETHUSDT 1d (90 bars, 2026-05-23 → 2026-08-20)
 - Contract: `candles(source,symbol,interval,open_time,open,high,low,close,volume) from rndz-market-data SQLite`
 - Harness: v0.1.0 · git `c93aa6d350c61459fa50d19dd11c9fa9e639f987` (dirty) · seed 42
-- Strategy code hash: `7eb0c841bbda6f62`
+- Strategy code hash: `9df4476a9986dfa4`
 
 ## Train/test discipline
 
 - Split: timewise, train 70% (62 bars, 2026-05-23 → 2026-07-23)
 - Test: 28 bars (2026-07-24 → 2026-08-20)
-- Parameters chosen by grid search on **train Sharpe only**: `{'fast': 3, 'slow': 10, 'short_on_down': True}` (grid: 8 combos; train Sharpe 1.103333)
+- Parameters chosen by grid search on **train Sharpe only**: `{'window': 20, 'oversold': 35, 'overbought': 65, 'short_overbought': False}` (grid: 54 combos; train Sharpe 4.344486)
 - Test partition evaluated exactly once with those parameters.
 
 ## Test metrics (strategy vs buy & hold)
 
 | Metric | Strategy | Buy & hold |
 |---|---|---|
-| Total return | 5.41% | 12.85% |
-| CAGR | 103.73% | 412.44% |
-| Ann. volatility | 33.98% | 36.96% |
-| Sharpe | 2.25 | 4.60 |
-| Sortino | 6.03 | 10.86 |
-| Calmar | 18.06 | 104.70 |
-| Max drawdown | 5.74% | 3.94% |
-| Win rate | 42.11% | 59.26% |
-| End equity (10k start) | 10,540.51 | 11,273.52 |
+| Total return | 0.00% | 24.71% |
+| CAGR | 0.00% | 1878.51% |
+| Ann. volatility | 0.00% | 70.55% |
+| Sharpe | 0.00 | 4.56 |
+| Sortino | 0.00 | 17.24 |
+| Calmar | 0.00 | 334.48 |
+| Max drawdown | 0.00% | 5.62% |
+| Win rate | 0.00% | 59.26% |
+| End equity (10k start) | 10,000.00 | 12,458.30 |
 
-- Trades on test: 4 (54.07 / year) · cost 0.1% per change
-- Train (same params, diagnostic): Sharpe 1.10, max DD 13.07%, total return 5.83%
+- Trades on test: 0 (0.0 / year) · cost 0.1% per change
+- Train (same params, diagnostic): Sharpe 4.34, max DD 0.10%, total return 9.23%
 
 ## Caveats
 

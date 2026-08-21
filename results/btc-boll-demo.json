@@ -1,0 +1,195 @@
+{
+  "harness_version": "0.1.0",
+  "generated_at": "2026-08-20T00:00:00+00:00",
+  "reproducibility": {
+    "seed": 42,
+    "git_revision": "c93aa6d350c61459fa50d19dd11c9fa9e639f987",
+    "git_dirty": true,
+    "strategy_code_hash": "e7af9fdcfedb4a5a",
+    "python": "3.12.3",
+    "platform": "aarch64"
+  },
+  "data": {
+    "db_path": "/root/rndz-market-data/data/market.db",
+    "source": "binance",
+    "symbol": "BTCUSDT",
+    "interval": "1d",
+    "n_rows": 90,
+    "start": 1779494400,
+    "end": 1787184000,
+    "start_iso": "2026-05-23T00:00:00+00:00",
+    "end_iso": "2026-08-20T00:00:00+00:00",
+    "contract": "candles(source,symbol,interval,open_time,open,high,low,close,volume) from rndz-market-data SQLite"
+  },
+  "split": {
+    "method": "timewise",
+    "train_frac": 0.7,
+    "n_train": 62,
+    "n_test": 28,
+    "train_start_iso": "2026-05-23T00:00:00+00:00",
+    "train_end_iso": "2026-07-23T00:00:00+00:00",
+    "test_start_iso": "2026-07-24T00:00:00+00:00",
+    "test_end_iso": "2026-08-20T00:00:00+00:00"
+  },
+  "strategy": {
+    "name": "bollinger_mean_reversion",
+    "params_grid_searched": [
+      {
+        "window": 10,
+        "n_std": 1.5,
+        "short_upper": false
+      },
+      {
+        "window": 10,
+        "n_std": 1.5,
+        "short_upper": true
+      },
+      {
+        "window": 10,
+        "n_std": 2.0,
+        "short_upper": false
+      },
+      {
+        "window": 10,
+        "n_std": 2.0,
+        "short_upper": true
+      },
+      {
+        "window": 10,
+        "n_std": 2.5,
+        "short_upper": false
+      },
+      {
+        "window": 10,
+        "n_std": 2.5,
+        "short_upper": true
+      },
+      {
+        "window": 20,
+        "n_std": 1.5,
+        "short_upper": false
+      },
+      {
+        "window": 20,
+        "n_std": 1.5,
+        "short_upper": true
+      },
+      {
+        "window": 20,
+        "n_std": 2.0,
+        "short_upper": false
+      },
+      {
+        "window": 20,
+        "n_std": 2.0,
+        "short_upper": true
+      },
+      {
+        "window": 20,
+        "n_std": 2.5,
+        "short_upper": false
+      },
+      {
+        "window": 20,
+        "n_std": 2.5,
+        "short_upper": true
+      },
+      {
+        "window": 30,
+        "n_std": 1.5,
+        "short_upper": false
+      },
+      {
+        "window": 30,
+        "n_std": 1.5,
+        "short_upper": true
+      },
+      {
+        "window": 30,
+        "n_std": 2.0,
+        "short_upper": false
+      },
+      {
+        "window": 30,
+        "n_std": 2.0,
+        "short_upper": true
+      },
+      {
+        "window": 30,
+        "n_std": 2.5,
+        "short_upper": false
+      },
+      {
+        "window": 30,
+        "n_std": 2.5,
+        "short_upper": true
+      }
+    ],
+    "params_chosen_on_train": {
+      "window": 20,
+      "n_std": 1.5,
+      "short_upper": true
+    },
+    "train_sharpe_of_chosen": 3.986134
+  },
+  "engine": {
+    "initial_capital": 10000.0,
+    "cost_per_trade": 0.001
+  },
+  "results": {
+    "train": {
+      "n_periods": 61,
+      "total_return": 0.051914,
+      "cagr": 0.353697,
+      "annualized_vol": 0.076723,
+      "sharpe": 3.986134,
+      "sortino": 15.880242,
+      "calmar": 40.856901,
+      "max_drawdown": 0.008657,
+      "win_rate": 0.5,
+      "profit_factor": 5.035463,
+      "end_equity": 10519.141288
+    },
+    "test": {
+      "n_periods": 27,
+      "total_return": -0.044887,
+      "cagr": -0.462513,
+      "annualized_vol": 0.161425,
+      "sharpe": -3.762767,
+      "sortino": -3.759473,
+      "calmar": -10.303873,
+      "max_drawdown": 0.044887,
+      "win_rate": 0.0,
+      "profit_factor": 0.0,
+      "end_equity": 9551.127325
+    },
+    "test_n_trades": 1,
+    "test_trades_per_year": 13.52,
+    "benchmark_buy_and_hold_test": {
+      "n_periods": 27,
+      "total_return": 0.128481,
+      "cagr": 4.124388,
+      "annualized_vol": 0.369638,
+      "sharpe": 4.604324,
+      "sortino": 10.859338,
+      "calmar": 104.69653,
+      "max_drawdown": 0.039394,
+      "win_rate": 0.592593,
+      "profit_factor": 2.333693,
+      "end_equity": 11273.520309
+    },
+    "benchmark_buy_and_hold_full": {
+      "n_periods": 89,
+      "total_return": -0.056953,
+      "cagr": -0.213755,
+      "annualized_vol": 0.377121,
+      "sharpe": -0.451334,
+      "sortino": -0.643042,
+      "calmar": -0.883975,
+      "max_drawdown": 0.241811,
+      "win_rate": 0.47191,
+      "profit_factor": 0.935902,
+      "end_equity": 9421.039095
+    }
+  }
+}

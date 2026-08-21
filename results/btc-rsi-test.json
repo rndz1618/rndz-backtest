@@ -1,0 +1,430 @@
+{
+  "harness_version": "0.1.0",
+  "generated_at": "2026-08-20T00:00:00+00:00",
+  "reproducibility": {
+    "seed": 42,
+    "git_revision": "c93aa6d350c61459fa50d19dd11c9fa9e639f987",
+    "git_dirty": true,
+    "strategy_code_hash": "9df4476a9986dfa4",
+    "python": "3.12.3",
+    "platform": "aarch64"
+  },
+  "data": {
+    "db_path": "/root/rndz-market-data/data/market.db",
+    "source": "binance",
+    "symbol": "BTCUSDT",
+    "interval": "1d",
+    "n_rows": 90,
+    "start": 1779494400,
+    "end": 1787184000,
+    "start_iso": "2026-05-23T00:00:00+00:00",
+    "end_iso": "2026-08-20T00:00:00+00:00",
+    "contract": "candles(source,symbol,interval,open_time,open,high,low,close,volume) from rndz-market-data SQLite"
+  },
+  "split": {
+    "method": "timewise",
+    "train_frac": 0.7,
+    "n_train": 62,
+    "n_test": 28,
+    "train_start_iso": "2026-05-23T00:00:00+00:00",
+    "train_end_iso": "2026-07-23T00:00:00+00:00",
+    "test_start_iso": "2026-07-24T00:00:00+00:00",
+    "test_end_iso": "2026-08-20T00:00:00+00:00"
+  },
+  "strategy": {
+    "name": "rsi_mean_reversion",
+    "params_grid_searched": [
+      {
+        "window": 10,
+        "oversold": 25,
+        "overbought": 65,
+        "short_overbought": false
+      },
+      {
+        "window": 10,
+        "oversold": 25,
+        "overbought": 65,
+        "short_overbought": true
+      },
+      {
+        "window": 10,
+        "oversold": 25,
+        "overbought": 70,
+        "short_overbought": false
+      },
+      {
+        "window": 10,
+        "oversold": 25,
+        "overbought": 70,
+        "short_overbought": true
+      },
+      {
+        "window": 10,
+        "oversold": 25,
+        "overbought": 75,
+        "short_overbought": false
+      },
+      {
+        "window": 10,
+        "oversold": 25,
+        "overbought": 75,
+        "short_overbought": true
+      },
+      {
+        "window": 10,
+        "oversold": 30,
+        "overbought": 65,
+        "short_overbought": false
+      },
+      {
+        "window": 10,
+        "oversold": 30,
+        "overbought": 65,
+        "short_overbought": true
+      },
+      {
+        "window": 10,
+        "oversold": 30,
+        "overbought": 70,
+        "short_overbought": false
+      },
+      {
+        "window": 10,
+        "oversold": 30,
+        "overbought": 70,
+        "short_overbought": true
+      },
+      {
+        "window": 10,
+        "oversold": 30,
+        "overbought": 75,
+        "short_overbought": false
+      },
+      {
+        "window": 10,
+        "oversold": 30,
+        "overbought": 75,
+        "short_overbought": true
+      },
+      {
+        "window": 10,
+        "oversold": 35,
+        "overbought": 65,
+        "short_overbought": false
+      },
+      {
+        "window": 10,
+        "oversold": 35,
+        "overbought": 65,
+        "short_overbought": true
+      },
+      {
+        "window": 10,
+        "oversold": 35,
+        "overbought": 70,
+        "short_overbought": false
+      },
+      {
+        "window": 10,
+        "oversold": 35,
+        "overbought": 70,
+        "short_overbought": true
+      },
+      {
+        "window": 10,
+        "oversold": 35,
+        "overbought": 75,
+        "short_overbought": false
+      },
+      {
+        "window": 10,
+        "oversold": 35,
+        "overbought": 75,
+        "short_overbought": true
+      },
+      {
+        "window": 14,
+        "oversold": 25,
+        "overbought": 65,
+        "short_overbought": false
+      },
+      {
+        "window": 14,
+        "oversold": 25,
+        "overbought": 65,
+        "short_overbought": true
+      },
+      {
+        "window": 14,
+        "oversold": 25,
+        "overbought": 70,
+        "short_overbought": false
+      },
+      {
+        "window": 14,
+        "oversold": 25,
+        "overbought": 70,
+        "short_overbought": true
+      },
+      {
+        "window": 14,
+        "oversold": 25,
+        "overbought": 75,
+        "short_overbought": false
+      },
+      {
+        "window": 14,
+        "oversold": 25,
+        "overbought": 75,
+        "short_overbought": true
+      },
+      {
+        "window": 14,
+        "oversold": 30,
+        "overbought": 65,
+        "short_overbought": false
+      },
+      {
+        "window": 14,
+        "oversold": 30,
+        "overbought": 65,
+        "short_overbought": true
+      },
+      {
+        "window": 14,
+        "oversold": 30,
+        "overbought": 70,
+        "short_overbought": false
+      },
+      {
+        "window": 14,
+        "oversold": 30,
+        "overbought": 70,
+        "short_overbought": true
+      },
+      {
+        "window": 14,
+        "oversold": 30,
+        "overbought": 75,
+        "short_overbought": false
+      },
+      {
+        "window": 14,
+        "oversold": 30,
+        "overbought": 75,
+        "short_overbought": true
+      },
+      {
+        "window": 14,
+        "oversold": 35,
+        "overbought": 65,
+        "short_overbought": false
+      },
+      {
+        "window": 14,
+        "oversold": 35,
+        "overbought": 65,
+        "short_overbought": true
+      },
+      {
+        "window": 14,
+        "oversold": 35,
+        "overbought": 70,
+        "short_overbought": false
+      },
+      {
+        "window": 14,
+        "oversold": 35,
+        "overbought": 70,
+        "short_overbought": true
+      },
+      {
+        "window": 14,
+        "oversold": 35,
+        "overbought": 75,
+        "short_overbought": false
+      },
+      {
+        "window": 14,
+        "oversold": 35,
+        "overbought": 75,
+        "short_overbought": true
+      },
+      {
+        "window": 20,
+        "oversold": 25,
+        "overbought": 65,
+        "short_overbought": false
+      },
+      {
+        "window": 20,
+        "oversold": 25,
+        "overbought": 65,
+        "short_overbought": true
+      },
+      {
+        "window": 20,
+        "oversold": 25,
+        "overbought": 70,
+        "short_overbought": false
+      },
+      {
+        "window": 20,
+        "oversold": 25,
+        "overbought": 70,
+        "short_overbought": true
+      },
+      {
+        "window": 20,
+        "oversold": 25,
+        "overbought": 75,
+        "short_overbought": false
+      },
+      {
+        "window": 20,
+        "oversold": 25,
+        "overbought": 75,
+        "short_overbought": true
+      },
+      {
+        "window": 20,
+        "oversold": 30,
+        "overbought": 65,
+        "short_overbought": false
+      },
+      {
+        "window": 20,
+        "oversold": 30,
+        "overbought": 65,
+        "short_overbought": true
+      },
+      {
+        "window": 20,
+        "oversold": 30,
+        "overbought": 70,
+        "short_overbought": false
+      },
+      {
+        "window": 20,
+        "oversold": 30,
+        "overbought": 70,
+        "short_overbought": true
+      },
+      {
+        "window": 20,
+        "oversold": 30,
+        "overbought": 75,
+        "short_overbought": false
+      },
+      {
+        "window": 20,
+        "oversold": 30,
+        "overbought": 75,
+        "short_overbought": true
+      },
+      {
+        "window": 20,
+        "oversold": 35,
+        "overbought": 65,
+        "short_overbought": false
+      },
+      {
+        "window": 20,
+        "oversold": 35,
+        "overbought": 65,
+        "short_overbought": true
+      },
+      {
+        "window": 20,
+        "oversold": 35,
+        "overbought": 70,
+        "short_overbought": false
+      },
+      {
+        "window": 20,
+        "oversold": 35,
+        "overbought": 70,
+        "short_overbought": true
+      },
+      {
+        "window": 20,
+        "oversold": 35,
+        "overbought": 75,
+        "short_overbought": false
+      },
+      {
+        "window": 20,
+        "oversold": 35,
+        "overbought": 75,
+        "short_overbought": true
+      }
+    ],
+    "params_chosen_on_train": {
+      "window": 20,
+      "oversold": 30,
+      "overbought": 65,
+      "short_overbought": false
+    },
+    "train_sharpe_of_chosen": 4.443977
+  },
+  "engine": {
+    "initial_capital": 10000.0,
+    "cost_per_trade": 0.001
+  },
+  "results": {
+    "train": {
+      "n_periods": 61,
+      "total_return": 0.048736,
+      "cagr": 0.329407,
+      "annualized_vol": 0.064553,
+      "sharpe": 4.443977,
+      "sortino": 82.926188,
+      "calmar": 329.406888,
+      "max_drawdown": 0.001,
+      "win_rate": 0.666667,
+      "profit_factor": 24.971499,
+      "end_equity": 10487.358614
+    },
+    "test": {
+      "n_periods": 27,
+      "total_return": 0.0,
+      "cagr": 0.0,
+      "annualized_vol": 0.0,
+      "sharpe": 0.0,
+      "sortino": 0.0,
+      "calmar": 0.0,
+      "max_drawdown": 0.0,
+      "win_rate": 0.0,
+      "profit_factor": 0.0,
+      "end_equity": 10000.0
+    },
+    "test_n_trades": 0,
+    "test_trades_per_year": 0.0,
+    "benchmark_buy_and_hold_test": {
+      "n_periods": 27,
+      "total_return": 0.128481,
+      "cagr": 4.124388,
+      "annualized_vol": 0.369638,
+      "sharpe": 4.604324,
+      "sortino": 10.859338,
+      "calmar": 104.69653,
+      "max_drawdown": 0.039394,
+      "win_rate": 0.592593,
+      "profit_factor": 2.333693,
+      "end_equity": 11273.520309
+    },
+    "benchmark_buy_and_hold_full": {
+      "n_periods": 89,
+      "total_return": -0.056953,
+      "cagr": -0.213755,
+      "annualized_vol": 0.377121,
+      "sharpe": -0.451334,
+      "sortino": -0.643042,
+      "calmar": -0.883975,
+      "max_drawdown": 0.241811,
+      "win_rate": 0.47191,
+      "profit_factor": 0.935902,
+      "end_equity": 9421.039095
+    }
+  }
+}

@@ -1,33 +1,33 @@
-# Backtest: sma_crossover on BTCUSDT
+# Backtest: sma_crossover on ETHUSDT
 
-- Source data: binance/BTCUSDT 1d (90 bars, 2026-05-23 → 2026-08-20)
+- Source data: binance/ETHUSDT 1d (90 bars, 2026-05-23 → 2026-08-20)
 - Contract: `candles(source,symbol,interval,open_time,open,high,low,close,volume) from rndz-market-data SQLite`
-- Harness: v0.1.0 · git `c93aa6d350c61459fa50d19dd11c9fa9e639f987` (dirty) · seed 42
+- Harness: v0.1.0 · git `58366be2366bc9f569be3c7f4d54c40727167d50` (dirty) · seed 42
 - Strategy code hash: `7eb0c841bbda6f62`
 
 ## Train/test discipline
 
 - Split: timewise, train 70% (62 bars, 2026-05-23 → 2026-07-23)
 - Test: 28 bars (2026-07-24 → 2026-08-20)
-- Parameters chosen by grid search on **train Sharpe only**: `{'fast': 3, 'slow': 10, 'short_on_down': True}` (grid: 8 combos; train Sharpe 1.103333)
+- Parameters chosen by grid search on **train Sharpe only**: `{'fast': 3, 'slow': 10, 'short_on_down': True}` (grid: 8 combos; train Sharpe 3.552001)
 - Test partition evaluated exactly once with those parameters.
 
 ## Test metrics (strategy vs buy & hold)
 
 | Metric | Strategy | Buy & hold |
 |---|---|---|
-| Total return | 5.41% | 12.85% |
-| CAGR | 103.73% | 412.44% |
-| Ann. volatility | 33.98% | 36.96% |
-| Sharpe | 2.25 | 4.60 |
-| Sortino | 6.03 | 10.86 |
-| Calmar | 18.06 | 104.70 |
-| Max drawdown | 5.74% | 3.94% |
-| Win rate | 42.11% | 59.26% |
-| End equity (10k start) | 10,540.51 | 11,273.52 |
+| Total return | 15.89% | 24.71% |
+| CAGR | 634.42% | 1878.51% |
+| Ann. volatility | 67.07% | 70.55% |
+| Sharpe | 3.27 | 4.56 |
+| Sortino | 16.23 | 17.24 |
+| Calmar | 113.01 | 334.48 |
+| Max drawdown | 5.61% | 5.62% |
+| Win rate | 57.89% | 59.26% |
+| End equity (10k start) | 11,589.28 | 12,458.30 |
 
 - Trades on test: 4 (54.07 / year) · cost 0.1% per change
-- Train (same params, diagnostic): Sharpe 1.10, max DD 13.07%, total return 5.83%
+- Train (same params, diagnostic): Sharpe 3.55, max DD 8.46%, total return 34.07%
 
 ## Caveats
 

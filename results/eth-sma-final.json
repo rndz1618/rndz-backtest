@@ -3,7 +3,7 @@
   "generated_at": "2026-08-20T00:00:00+00:00",
   "reproducibility": {
     "seed": 42,
-    "git_revision": "c93aa6d350c61459fa50d19dd11c9fa9e639f987",
+    "git_revision": "58366be2366bc9f569be3c7f4d54c40727167d50",
     "git_dirty": true,
     "strategy_code_hash": "7eb0c841bbda6f62",
     "python": "3.12.3",
